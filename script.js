@@ -14,3 +14,15 @@ const getComputerChoice = function () {
   }
 };
 console.log(getComputerChoice());
+
+// 2.human choice logic...
+const getHumanChoice = function () {
+  let shoot = prompt("rock, paper or scissors");
+  return shoot.toLowerCase();
+};
+getHumanChoice();
+// console.log(getHumanChoice());
+
+// 3.players score variables
+let computerScore = 0;
+let humanScore = 0;
