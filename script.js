@@ -26,3 +26,23 @@ getHumanChoice();
 // 3.players score variables
 let computerScore = 0;
 let humanScore = 0;
+
+// 4.write the logic to play a single round
+const playRound = function (humanChoice, computerChoice) {
+  const humanWins =
+    (humanChoice === "rock" && computerChoice === "scissors") ||
+    (humanChoice === "scissors" && computerChoice === "paper") ||
+    (humanChoice === "paper" && computerChoice === "rock");
+
+  if (humanChoice === computerChoice) {
+    console.log(`It's a tie!! You both chose ${humanChoice}`);
+  } else if (humanWins) {
+    console.log(`🤪You win ${humanChoice} beats ${computerChoice}`);
+    humanScore++;
+  } else {
+    console.log(`🫣You lose ${computerChoice} beats ${humanChoice}`);
+    computerScore++;
+  }
+
+  console.log(`score -> You: ${humanScore} | Computer:${computerScore}`);
+};
